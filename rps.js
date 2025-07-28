@@ -1,16 +1,16 @@
 function getComputerChoice(){
-    val = Math.random();
+    let val = Math.random();
     if (val < 1/3){
         return "rock";
     }else if (val >=1/3 && val <2/3){
-        return  "paper"
+        return  "paper";
     }else {
-        return "scissors"
+        return "scissors";
     }
 }
 
 function getHumanChoice(){
-    let choice = prompt("RPS?")
+    let choice = prompt("RPS?");
     return choice.toLowerCase();
 }
 
@@ -21,7 +21,7 @@ function playRound(){
     let humanChoice = getHumanChoice();
     let computerChoice = getComputerChoice();
     if (humanChoice == computerChoice){
-        console.log("Tied.")
+        console.log("Tied.");
     } else {
         if (humanChoice == "rock"){
             if (computerChoice == "paper"){
@@ -57,9 +57,9 @@ function playGame(rounds = 5){
         playRound();
     }
     if (humanScore > computerScore) {
-        console.log(`Final score is ${humanScore}-${computerScore}. Human wins.`)
+        console.log(`Final score is ${humanScore}-${computerScore}. Human wins.`);
     } else {
-        console.log(`Final score is ${humanScore}-${computerScore}. Human loses.`)
+        console.log(`Final score is ${humanScore}-${computerScore}. Human loses.`);
     }
 }
 
