@@ -8,3 +8,8 @@ function getComputerChoice(){
         return "scissors"
     }
 }
+
+function getHumanChoice(){
+    let choice = prompt("RPS?")
+    return choice.toLowerCase();
+}
